@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nav</title>
+  </head>
+  <body>
+    <div class="nav-container">
+      <!-- navbar -->
+      <nav class="nav">
+        <div class="nav-left">
+          <div class="logo-container">
+            <svg
+              width="24"
+              height="40"
+              viewBox="0 0 24 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 19.1703V12.4354C1 10.9475 2.26568 9.74139 3.82708 9.74139C5.38848 9.74139 6.65416 10.9475 6.65416 12.4354V17.8234H12.0256V11.0884C12.0256 9.45852 13.425 8.125 15.1354 8.125C16.6968 8.125 17.9625 9.3311 17.9625 10.819V19.1703"
+                stroke="var(--theme-black)"
+                stroke-width="1.2"
+              ></path>
+              <path
+                opacity="0.7"
+                d="M1 20.8272V27.5622C1 29.0501 2.26568 30.2562 3.82708 30.2562C5.38848 30.2562 6.65416 29.0501 6.65416 27.5622V22.1742H12.0256V28.9092C12.0256 30.539 13.425 31.8726 15.1354 31.8726C16.6968 31.8726 17.9625 30.6665 17.9625 29.1786V20.8272"
+                stroke="var(--theme-light-700)"
+                stroke-width="1.2"
+              ></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="nav-right">
+          <div class="inner-nav-group">
+            <ul class="nav-links">
+              <li class="nav-link-li">
+                <a href="#" class="nav-link">Topics</a>
+              </li>
+              <li class="nav-link-li">
+                <a href="#" class="nav-link">About</a>
+              </li>
+              <li class="nav-link-li">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <div class="theme-switch">
+              <div class="container">
+                <label class="toggle" for="switch">
+                  <input id="switch" class="input" type="checkbox" />
+                  <div class="icon icon--moon">
+                    <img src="./assets/svg/sun.svg" alt="" />
+                  </div>
+
+                  <div class="icon icon--sun">
+                    <img src="./assets/svg/moon.svg" alt="" />
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <input
+            hidden=""
+            class="check-icon"
+            id="check-icon"
+            name="check-icon"
+            type="checkbox"
+          />
+          <label onclick="show()" id="menu" class="icon-menu" for="check-icon">
+            <div class="bar bar--1"></div>
+            <div class="bar bar--2"></div>
+            <div class="bar bar--3"></div>
+          </label>
+        </div>
+      </nav>
+      <!-- nav for mobile -->
+      <div class="mobile-nav" id="mobile-nav">
+        <ul class="nav-links">
+          <li class="nav-link-li">
+            <a href="#" class="nav-link">Topics</a>
+          </li>
+          <li class="nav-link-li">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-link-li">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      var menuBtn = document.getElementById("check-icon");
+      var menu = document.getElementById("mobile-nav");
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("is-visible");
+      });
+    </script>
+  </body>
+</html>
